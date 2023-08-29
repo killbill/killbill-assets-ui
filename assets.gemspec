@@ -18,5 +18,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'font-awesome-rails'
   s.add_dependency 'jquery-datatables-rails'
   s.add_dependency 'jquery-rails', '~> 4.5.1'
+  s.add_dependency 'bootstrap-datepicker-rails'
+  s.add_dependency 'bootstrap-sass', '~> 3.4.1'
   s.add_dependency 'sass-rails'
 end
