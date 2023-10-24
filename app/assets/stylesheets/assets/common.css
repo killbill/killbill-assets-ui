@@ -4,7 +4,5 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require font-awesome
  *= require bootstrap-datepicker3
- *= require assets/bootstrap
- *= require assets/element
- *= require assets/datatable
+ *= require_tree .
  */
