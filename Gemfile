@@ -7,5 +7,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 group :development do
+  gem 'gem-release'
   gem 'rubocop'
 end
