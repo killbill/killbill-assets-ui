@@ -1,2 +1,4 @@
-require "assets/version"
-require "assets/engine"
+# frozen_string_literal: true
+
+require 'assets/version'
+require 'assets/engine'
