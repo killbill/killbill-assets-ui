@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'font-awesome-rails'
 require 'jquery-rails'
 require 'bootstrap-datepicker-rails'
