@@ -1,8 +1,8 @@
 # Killbill::Assets::Ui
-Short description and motivation.
+`killbill-assets-ui` is a Ruby gem that provides UI assets for Kill Bill, an open-source billing and payments platform. This gem is designed to be integrated into Ruby on Rails applications, providing a seamless way to incorporate Kill Bill's UI components.
 
 ## Usage
-How to use my plugin.
+After installing the gem, you can use the provided UI assets in your Rails application. This can help you quickly build a billing and payments interface using Kill Bill's robust features.
 
 ## Installation
 Add this line to your application's Gemfile:
