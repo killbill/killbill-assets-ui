@@ -7,4 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-datepicker
+//= require assets/jquery_datatables
+//= require assets/dataTables.colReorder.min
 //= require_tree .
