@@ -64,3 +64,41 @@
   -o-transition: opacity 0.2s ease-in-out;
   cursor: pointer;
 }
+
+.flex {
+  display: flex !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-row {
+  flex-direction: row !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.items-center {
+  align-items: center !important;
+}
+.align-items-start {
+  align-items: flex-start !important;
+}
+.align-items-end {
+  align-items: flex-end !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-end {
+  text-align: end !important;
+}
+.text-start {
+  text-align: start !important;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  box-shadow: none !important;
+}
