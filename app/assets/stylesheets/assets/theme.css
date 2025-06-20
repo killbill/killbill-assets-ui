@@ -17,11 +17,11 @@
 }
 
 .text-primary {
-  color: #ff5722 !important;
+  color: #1570ef !important;
 }
 
 .bg-primary {
-  background-color: #ff5722 !important;
+  background-color: #1570ef !important;
 }
 
 .text-black-900 {
@@ -101,4 +101,8 @@
 
 .btn-check:focus+.btn-primary, .btn-primary:focus {
   box-shadow: none !important;
+}
+
+.border-secondary {
+  border-color: #E9EAEB !important;
 }
