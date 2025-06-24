@@ -99,10 +99,49 @@
   text-align: start !important;
 }
 
-.btn-check:focus+.btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
   box-shadow: none !important;
 }
 
 .border-secondary {
-  border-color: #E9EAEB !important;
+  border-color: #e9eaeb !important;
+}
+
+.kaui-button {
+  padding: 6px 10px;
+  align-items: center;
+  display: flex;
+  max-height: max-content;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #414651 !important;
+  border: 1px solid #d5d7da !important;
+}
+
+.kaui-button:hover {
+  background-color: #fff !important;
+}
+
+.kaui-dropdown {
+  background-color: #1570ef !important;
+  padding: 6px 10px;
+  align-items: center;
+  display: flex;
+  max-height: max-content;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff !important;
+}
+.kaui-dropdown:hover {
+  background-color: #1570ef !important;
+}
+
+.kaui-button:focus,
+.kaui-dropdown:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
 }
