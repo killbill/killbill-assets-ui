@@ -48,11 +48,10 @@ p {
     padding-left: 30px; }
 
 a {
-  color: #00919d;
+  color: blue;
   transition: all 0.3s; }
   a:hover {
-    text-decoration: none;
-    color: #00626a; }
+    text-decoration: none; }
   a .fa-times {
     color: #e44c3a; }
     a .fa-times:hover {
@@ -113,7 +112,7 @@ textarea {
   line-height: 16px; }
 
 button, input[type="submit"] {
-  background: #00919d;
+  background: blue;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -123,7 +122,7 @@ button, input[type="submit"] {
   border: 0;
   transition: all 0.5s; }
   button:hover, input[type="submit"]:hover {
-    background: #00626a;
+    background: #165ff0;
     color: #fff; }
 
 label {
@@ -309,7 +308,7 @@ table.subtitle {
       .toggler.toggled .first-line > .fa-caret-up {
         display: inline-block; }
   .toggler .fa-star {
-    color: #00919d; }
+    color: blue; }
   .toggler .first-line {
     cursor: pointer; }
     @media (max-width: 768px) {
@@ -418,7 +417,7 @@ form[id^="new_tag_definition"] #object_types div {
     -webkit-transition: .4s;
     transition: .4s; }
   .switch-half input:checked + .slider {
-    background-color: #00919d; }
+    background-color: blue; }
   .switch-half input:focus + .slider {
     box-shadow: 0 0 1px #2196F3; }
   .switch-half input:checked + .slider:before {
@@ -456,7 +455,7 @@ form[id^="new_tag_definition"] #object_types div {
     -webkit-transition: .4s;
     transition: .4s; }
   .switch input:checked + .slider {
-    background-color: #00919d; }
+    background-color: blue; }
   .switch input:focus + .slider {
     box-shadow: 0 0 1px #2196F3; }
   .switch input:checked + .slider:before {
@@ -491,7 +490,7 @@ form[id^="new_tag_definition"] #object_types div {
 .spinner {
   padding-top: 3.5px;
   width: 40px;
-  color: #00919d;
+  color: blue;
   display: none; }
 
 .footer-notice .modal-footer {
@@ -506,7 +505,7 @@ form[id^="new_tag_definition"] #object_types div {
   cursor: pointer; }
 
 .switch-tenant-active {
-  color: #00919d; }
+  color: blue; }
 
 /* Required for https://github.com/killbill/killbill-admin-ui/issues/262 */
 .ui-autocomplete {
