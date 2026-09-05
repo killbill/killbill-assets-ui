@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-datepicker-rails'
   s.add_dependency 'font-awesome-rails'
   s.add_dependency 'jquery-rails', '~> 4.5.1'
-  s.add_dependency 'rails', '>= 7.0'
+  s.add_dependency 'rails', '~> 7.2'
   s.metadata['rubygems_mfa_required'] = 'true'
 end
