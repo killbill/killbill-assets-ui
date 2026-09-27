@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
-  --dt-row-selected: 13, 110, 253;
+  /* Mirrors --kb-primary-500 (#155EEF); must stay an RGB triplet for the rgba(var(--dt-row-selected), …) rules below */
+  --dt-row-selected: 21, 94, 239;
   --dt-row-selected-text: 255, 255, 255;
   --dt-row-selected-link: 9, 10, 11;
   --dt-row-stripe: 0, 0, 0;

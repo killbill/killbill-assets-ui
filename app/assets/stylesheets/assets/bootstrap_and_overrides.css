@@ -7,3 +7,22 @@
     url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
     url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+/*
+ * Bootstrap bridge — keeps Bootstrap components on the design system.
+ * This file is required right after bootstrap.min.css (which defines its
+ * own --bs-* variables on :root), so these redefinitions win the cascade.
+ * Replaces the hardcoded block previously in theme.css.
+ * --bs-info has no design-system counterpart yet; mapped to primary-400
+ * until the Figma defines one.
+ */
+:root {
+  --bs-primary: var(--kb-primary);
+  --bs-secondary: var(--kb-neutral-400);
+  --bs-success: var(--kb-success);
+  --bs-danger: var(--kb-error);
+  --bs-warning: var(--kb-warning);
+  --bs-info: var(--kb-primary-400);
+  --bs-light: var(--kb-surface-container);
+  --bs-dark: var(--kb-neutral-800);
+}
