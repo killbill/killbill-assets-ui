@@ -36,7 +36,8 @@ Token layers (prefix `--kb-`, mirroring the Figma file "Kill Bill | Design Syste
   `--kb-error-*`, `--kb-warning-*`, `--kb-success-*`, `--kb-purple-*`.
 - **Semantic** — alias the primitives; use these in app styles:
   - actions: `--kb-primary`, `--kb-primary-hover`, `--kb-primary-pressed`, `--kb-on-primary`
-  - surfaces: `--kb-surface-container{-lowest,-low,, -high}`
+  - surfaces: `--kb-surface-container-lowest`, `--kb-surface-container-low`,
+    `--kb-surface-container`, `--kb-surface-container-high`
   - text: `--kb-on-surface{-primary,-secondary,-tertiary,-quaternary}`
   - borders: `--kb-outline{-primary,-secondary,-tertiary}`
   - status: `--kb-{error,warning,success}` (+ `-hover`, `-pressed`, `--kb-on-{error,warning,success}`)

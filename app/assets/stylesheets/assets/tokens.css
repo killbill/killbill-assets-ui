@@ -39,6 +39,9 @@
   --kb-primary-300: #528bff;
   --kb-primary-400: #2970ff;
   --kb-primary-500: #155eef;
+  /* RGB channels of primary-500, for contexts that need the triplet form
+     (e.g. rgba(var(--kb-primary-500-rgb), 0.5) and --dt-* DataTables vars). */
+  --kb-primary-500-rgb: 21, 94, 239;
   --kb-primary-600: #0040c1;
   --kb-primary-700: #00359e;
   --kb-primary-800: #0e2555;
@@ -105,6 +108,8 @@
   --kb-primary: var(--kb-primary-500);
   --kb-primary-hover: var(--kb-primary-600);
   --kb-primary-pressed: var(--kb-primary-400);
+  /* Known issue: white on primary-400 (pressed) is ~4.3:1, below WCAG AA
+     4.5:1 for normal text. Value comes from the Figma; pending design review. */
   --kb-on-primary: var(--kb-neutral-0);
 
   /* ──────────────────────────────────────────────────────────────
@@ -141,6 +146,8 @@
   --kb-warning: var(--kb-warning-500);
   --kb-warning-hover: var(--kb-warning-600);
   --kb-warning-pressed: var(--kb-warning-400);
+  /* Known issue: white on warning-500 is ~3.5:1, below WCAG AA 4.5:1 for
+     normal text. Value comes from the Figma; pending design review. */
   --kb-on-warning: var(--kb-neutral-0);
 
   --kb-success: var(--kb-success-500);
