@@ -1,0 +1,245 @@
+/*
+ * Kill Bill Design System 2026 — design tokens.
+ * Single source of truth for color and typography across KAUI and all
+ * mountable engines. Mirrors the Figma file "Kill Bill | Design System 2026";
+ * when the Figma changes, update this file only.
+ *
+ * The two @import rules below must stay at the very top of this file:
+ * tokens.css is the first file required in the assets/common bundle, and
+ * browsers ignore @import rules that appear after any other rule in the
+ * concatenated output.
+ */
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+
+:root {
+  /* ──────────────────────────────────────────────────────────────
+     Primitives — neutral
+     ────────────────────────────────────────────────────────────── */
+  --kb-neutral-0: #ffffff;
+  --kb-neutral-25: #f9fafb;
+  --kb-neutral-50: #f2f4f7;
+  --kb-neutral-100: #e8e9eb;
+  --kb-neutral-200: #d0d5dd;
+  --kb-neutral-300: #98a2b3;
+  --kb-neutral-400: #667085;
+  --kb-neutral-500: #475467;
+  --kb-neutral-600: #344054;
+  --kb-neutral-700: #1d2939;
+  --kb-neutral-800: #101828;
+  --kb-neutral-900: #0b0d12;
+
+  /* ──────────────────────────────────────────────────────────────
+     Primitives — primary (blue)
+     ────────────────────────────────────────────────────────────── */
+  --kb-primary-25: #eff4ff;
+  --kb-primary-50: #d1e0ff;
+  --kb-primary-100: #b2ccff;
+  --kb-primary-200: #84adff;
+  --kb-primary-300: #528bff;
+  --kb-primary-400: #2970ff;
+  --kb-primary-500: #155eef;
+  /* RGB channels of primary-500, for contexts that need the triplet form
+     (e.g. rgba(var(--kb-primary-500-rgb), 0.5) and --dt-* DataTables vars). */
+  --kb-primary-500-rgb: 21, 94, 239;
+  --kb-primary-600: #0040c1;
+  --kb-primary-700: #00359e;
+  --kb-primary-800: #0e2555;
+
+  /* ──────────────────────────────────────────────────────────────
+     Primitives — error (red)
+     ────────────────────────────────────────────────────────────── */
+  --kb-error-25: #fef3f2;
+  --kb-error-50: #fee4e2;
+  --kb-error-100: #fecdca;
+  --kb-error-200: #fda29b;
+  --kb-error-300: #f97066;
+  --kb-error-400: #f04438;
+  --kb-error-500: #d92d20;
+  --kb-error-600: #b42318;
+  --kb-error-700: #912018;
+  --kb-error-800: #7a271a;
+
+  /* ──────────────────────────────────────────────────────────────
+     Primitives — warning (orange)
+     ────────────────────────────────────────────────────────────── */
+  --kb-warning-25: #fffaeb;
+  --kb-warning-50: #fef0c7;
+  --kb-warning-100: #fedf89;
+  --kb-warning-200: #fec84b;
+  --kb-warning-300: #fdb022;
+  --kb-warning-400: #f79009;
+  --kb-warning-500: #dc6803;
+  --kb-warning-600: #b54708;
+  --kb-warning-700: #93370d;
+  --kb-warning-800: #7a2e0e;
+
+  /* ──────────────────────────────────────────────────────────────
+     Primitives — success (green)
+     ────────────────────────────────────────────────────────────── */
+  --kb-success-25: #ecfdf3;
+  --kb-success-50: #d1fadf;
+  --kb-success-100: #a6f4c5;
+  --kb-success-200: #6ce9a6;
+  --kb-success-300: #32d583;
+  --kb-success-400: #12b76a;
+  --kb-success-500: #039855;
+  --kb-success-600: #027a48;
+  --kb-success-700: #05603a;
+  --kb-success-800: #054f31;
+
+  /* ──────────────────────────────────────────────────────────────
+     Primitives — purple
+     ────────────────────────────────────────────────────────────── */
+  --kb-purple-25: #f4f3ff;
+  --kb-purple-50: #ebe9fe;
+  --kb-purple-100: #d9d6fe;
+  --kb-purple-200: #bdb4fe;
+  --kb-purple-300: #9b8afb;
+  --kb-purple-400: #7a5af8;
+  --kb-purple-500: #6938ef;
+  --kb-purple-600: #4a1fb8;
+  --kb-purple-700: #3e1c96;
+  --kb-purple-800: #181232;
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — primary actions
+     ────────────────────────────────────────────────────────────── */
+  --kb-primary: var(--kb-primary-500);
+  --kb-primary-hover: var(--kb-primary-600);
+  --kb-primary-pressed: var(--kb-primary-400);
+  /* Known issue: white on primary-400 (pressed) is ~4.3:1, below WCAG AA
+     4.5:1 for normal text. Value comes from the Figma; pending design review. */
+  --kb-on-primary: var(--kb-neutral-0);
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — surfaces
+     ────────────────────────────────────────────────────────────── */
+  --kb-surface-container-lowest: var(--kb-neutral-0);
+  --kb-surface-container-low: var(--kb-neutral-25);
+  --kb-surface-container: var(--kb-neutral-50);
+  --kb-surface-container-high: var(--kb-neutral-100);
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — text (onSurface)
+     ────────────────────────────────────────────────────────────── */
+  --kb-on-surface-primary: var(--kb-neutral-900);
+  --kb-on-surface-secondary: var(--kb-neutral-500);
+  --kb-on-surface-tertiary: var(--kb-neutral-400);
+  --kb-on-surface-quaternary: var(--kb-neutral-300);
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — outlines / borders
+     ────────────────────────────────────────────────────────────── */
+  --kb-outline-primary: var(--kb-neutral-100);
+  --kb-outline-secondary: var(--kb-neutral-200);
+  --kb-outline-tertiary: var(--kb-neutral-300);
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — status colors
+     ────────────────────────────────────────────────────────────── */
+  --kb-error: var(--kb-error-500);
+  --kb-error-hover: var(--kb-error-600);
+  --kb-error-pressed: var(--kb-error-400);
+  --kb-on-error: var(--kb-neutral-0);
+
+  --kb-warning: var(--kb-warning-500);
+  --kb-warning-hover: var(--kb-warning-600);
+  --kb-warning-pressed: var(--kb-warning-400);
+  /* Known issue: white on warning-500 is ~3.5:1, below WCAG AA 4.5:1 for
+     normal text. Value comes from the Figma; pending design review. */
+  --kb-on-warning: var(--kb-neutral-0);
+
+  --kb-success: var(--kb-success-500);
+  --kb-success-hover: var(--kb-success-600);
+  --kb-success-pressed: var(--kb-success-400);
+  --kb-on-success: var(--kb-neutral-0);
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — disabled states
+     ────────────────────────────────────────────────────────────── */
+  --kb-disable-primary: var(--kb-neutral-300);
+  --kb-disable-secondary: var(--kb-neutral-200);
+  --kb-disable-tertiary: var(--kb-neutral-100);
+
+  /* ──────────────────────────────────────────────────────────────
+     Semantic — tag containers (background / foreground pairs)
+     ────────────────────────────────────────────────────────────── */
+  --kb-neutral-container: var(--kb-neutral-50);
+  --kb-on-neutral-container: var(--kb-neutral-700);
+  --kb-primary-container: var(--kb-primary-100);
+  --kb-on-primary-container: var(--kb-primary-700);
+  --kb-error-container: var(--kb-error-100);
+  --kb-on-error-container: var(--kb-error-700);
+  --kb-warning-container: var(--kb-warning-100);
+  --kb-on-warning-container: var(--kb-warning-700);
+  --kb-success-container: var(--kb-success-100);
+  --kb-on-success-container: var(--kb-success-700);
+  --kb-purple-container: var(--kb-purple-100);
+  --kb-on-purple-container: var(--kb-purple-700);
+
+  /* ──────────────────────────────────────────────────────────────
+     Typography — font families
+     ────────────────────────────────────────────────────────────── */
+  --kb-font-family-base: "Inter", sans-serif;
+  /* Used only by the legacy element.css layer; remove with it. */
+  --kb-font-family-legacy: "Lato", sans-serif;
+
+  /* ──────────────────────────────────────────────────────────────
+     Typography — text styles (weight size/line-height family).
+     px values from Figma in comments; use as `font: var(--kb-…)`.
+     ────────────────────────────────────────────────────────────── */
+  --kb-display-large: 600 3.5rem/4.375rem var(--kb-font-family-base);    /* 56/70 */
+  --kb-display-medium: 600 3rem/3.75rem var(--kb-font-family-base);      /* 48/60 */
+  --kb-display-small: 600 2.5rem/3.125rem var(--kb-font-family-base);    /* 40/50 */
+
+  --kb-headline-large: 600 2rem/2.5rem var(--kb-font-family-base);       /* 32/40 */
+  --kb-headline-medium: 600 1.75rem/2.25rem var(--kb-font-family-base);  /* 28/36 */
+  --kb-headline-small: 600 1.5rem/1.875rem var(--kb-font-family-base);   /* 24/30 */
+
+  --kb-title-large: 500 1.25rem/1.625rem var(--kb-font-family-base);     /* 20/26 */
+  --kb-title-medium: 500 1rem/1.375rem var(--kb-font-family-base);       /* 16/22 */
+  --kb-title-small: 500 0.875rem/1.25rem var(--kb-font-family-base);     /* 14/20 */
+
+  --kb-body-large: 400 1rem/1.375rem var(--kb-font-family-base);         /* 16/22 */
+  --kb-body-medium: 400 0.875rem/1.25rem var(--kb-font-family-base);     /* 14/20 */
+  --kb-body-small: 400 0.75rem/1rem var(--kb-font-family-base);          /* 12/16 */
+
+  --kb-label-large-emphasis: 600 0.875rem/1.25rem var(--kb-font-family-base); /* 14/20 */
+  --kb-label-large: 500 0.875rem/1.25rem var(--kb-font-family-base);     /* 14/20 */
+  --kb-label-medium: 500 0.75rem/1rem var(--kb-font-family-base);        /* 12/16 */
+  --kb-label-small: 500 0.625rem/0.75rem var(--kb-font-family-base);     /* 10/12 */
+
+  /* ──────────────────────────────────────────────────────────────
+     Legacy palette — exact values used by the old KAUI theme
+     (element.css / datatable.css). These preserve the current
+     rendering; they are NOT part of the 2026 design system and
+     this section should shrink as screens migrate. New styles
+     must not use these.
+     ────────────────────────────────────────────────────────────── */
+  --kb-legacy-accent: #e44c3a;              /* old KAUI red accent (h1, close icons) */
+  --kb-legacy-accent-dark: #cf2f1c;         /* accent hover */
+  --kb-legacy-blue: #0000ff;                /* old `blue` keyword links/buttons/switches */
+  --kb-legacy-blue-hover: #165ff0;          /* old button hover */
+  --kb-legacy-focus: #2196f3;               /* old switch focus shadow */
+  --kb-legacy-text: #777777;                /* old body text */
+  --kb-legacy-heading: #313131;             /* old h2/h3 */
+  --kb-legacy-label: #585858;               /* old form labels, transparent-table th */
+  --kb-legacy-muted: #999999;               /* old paragraphs, toggler carets */
+  --kb-legacy-text-dark: #555555;           /* old autocomplete items */
+  --kb-legacy-placeholder: #aaaaaa;         /* old input placeholders */
+  --kb-legacy-bg: #f9f9f9;                  /* old body background, toggler hover */
+  --kb-legacy-border: #cccccc;              /* old default borders */
+  --kb-legacy-border-light: #dddddd;        /* old lighter borders */
+  --kb-legacy-border-dark: #c9c9c9;         /* old condensed-table column separators */
+  --kb-legacy-table-bg: #f3f3f3;            /* old table borders + header background */
+  --kb-legacy-table-header-text: #989898;   /* old table header text */
+  --kb-legacy-input-outline: #7dc7cd;       /* old input outline */
+  --kb-legacy-success: #5eca8f;             /* old success badge */
+  --kb-legacy-danger: #df4232;              /* old fail badge */
+  --kb-legacy-autocomplete-active: #0088cc; /* old autocomplete hover */
+  --kb-legacy-row-insert: #dff0d8;          /* old audit-row: inserted */
+  --kb-legacy-row-update: #fcf8e3;          /* old audit-row: updated */
+  --kb-legacy-row-delete: #f2dede;          /* old audit-row: deleted */
+  --kb-legacy-row-disabled: #f5f5f5;        /* old disabled row */
+}

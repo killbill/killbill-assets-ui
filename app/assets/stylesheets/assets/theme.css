@@ -1,43 +1,35 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
-
-:root {
-  --bs-primary: #1570ef; /* your custom primary color */
-  --bs-secondary: #777777;
-  --bs-success: #4caf50;
-  --bs-danger: #f44336;
-  --bs-warning: #ffc107;
-  --bs-info: #00bcd4;
-  --bs-light: #f1f1f1;
-  --bs-dark: #212121;
-}
+/*
+ * New KAUI theme. All colors come from the design tokens in tokens.css
+ * (Kill Bill Design System 2026) — do not hardcode color values here.
+ */
 
 .btn-primary {
-  background-color: #1570ef !important;
-  border-color: #1570ef !important;
+  background-color: var(--kb-primary) !important;
+  border-color: var(--kb-primary) !important;
 }
 
 .text-primary {
-  color: #1570ef !important;
+  color: var(--kb-primary) !important;
 }
 
 .bg-primary {
-  background-color: #1570ef !important;
+  background-color: var(--kb-primary) !important;
 }
 
 .text-black-900 {
-  color: #181d27 !important;
+  color: var(--kb-on-surface-primary) !important;
 }
 
 .text-black-700 {
-  color: #414651 !important;
+  color: var(--kb-on-surface-secondary) !important;
 }
 
 .text-tertiary {
-  color: #535862 !important;
+  color: var(--kb-on-surface-tertiary) !important;
 }
 
 .text-quaternary {
-  color: #717680 !important;
+  color: var(--kb-on-surface-quaternary) !important;
 }
 
 .fw-500 {
@@ -105,7 +97,7 @@
 }
 
 .border-secondary {
-  border-color: #e9eaeb !important;
+  border-color: var(--kb-outline-primary) !important;
 }
 
 .kaui-button {
@@ -116,16 +108,16 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: #414651 !important;
-  border: 1px solid #d5d7da !important;
+  color: var(--kb-on-surface-secondary) !important;
+  border: 1px solid var(--kb-outline-secondary) !important;
 }
 
 .kaui-button:hover {
-  background-color: #fff !important;
+  background-color: var(--kb-surface-container-lowest) !important;
 }
 
 .kaui-dropdown {
-  background-color: #1570ef !important;
+  background-color: var(--kb-primary) !important;
   padding: 6px 10px;
   align-items: center;
   display: flex;
@@ -133,10 +125,10 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: #fff !important;
+  color: var(--kb-on-primary) !important;
 }
 .kaui-dropdown:hover {
-  background-color: #1570ef !important;
+  background-color: var(--kb-primary) !important;
 }
 
 .kaui-button:focus,

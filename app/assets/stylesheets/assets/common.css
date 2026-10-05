@@ -1,8 +1,24 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
+ * Manifest for the shared Kill Bill UI assets.
+ * Files are required explicitly (not require_tree) so the load order stays
+ * deterministic:
+ *   1. tokens must be first — its font @imports are only honored at the top
+ *      of the concatenated bundle, and its custom properties carry no rules
+ *      that could affect the cascade of the vendor files below;
+ *   2. bootstrap_and_overrides must stay immediately after bootstrap.min —
+ *      it redefines Bootstrap's :root --bs-* variables;
+ *   3. theme stays last so its overrides win, as before.
+ * Add new stylesheets to this list explicitly.
+ *
+ *= require assets/tokens
  *= require font-awesome
  *= require bootstrap-datepicker3
- *= require_tree .
+ *= require assets/bootstrap.min
+ *= require assets/bootstrap_and_overrides
+ *= require assets/dataTables.colReorder.min
+ *= require assets/datatable
+ *= require assets/element
+ *= require assets/jquery-ui.min
+ *= require assets/jquery_datatables
+ *= require assets/theme
  */
